@@ -7,18 +7,20 @@ public class Match {
     private String date;
     private String home;
     private String away;
-    private String result;
+    private String resultHome;
+    private String resultAway;
     private List<Player> goalsHome = new ArrayList<>();
     private List<Player> goalsAway = new ArrayList<>();
 
     public Match() {
     }
 
-    public Match(String date, String home, String away, String result, List<Player> goalsHome, List<Player> goalsAway) {
+    public Match(String date, String home, String away, String resultHome,String resultAway, List<Player> goalsHome, List<Player> goalsAway) {
         this.date = date;
         this.home = home;
         this.away = away;
-        this.result = result;
+        this.resultHome = resultHome;
+        this.resultAway = resultAway;
         this.goalsHome = goalsHome;
         this.goalsAway = goalsAway;
     }
@@ -47,12 +49,20 @@ public class Match {
         this.away = away;
     }
 
-    public String getResult() {
-        return result;
+    public String getResultHome() {
+        return resultHome;
     }
 
-    public void setResult(String result) {
-        this.result = result;
+    public void setResultHome(String resultHome) {
+        this.resultHome = resultHome;
+    }
+
+    public String getResultAway() {
+        return resultAway;
+    }
+
+    public void setResultAway(String resultAway) {
+        this.resultAway = resultAway;
     }
 
     public List<Player> getGoalsHome() {
@@ -77,7 +87,8 @@ public class Match {
                 "date='" + date + '\'' +
                 ", home='" + home + '\'' +
                 ", away='" + away + '\'' +
-                ", result='" + result + '\'' +
+                ", resultHome='" + resultHome + '\'' +
+                ", resultAway='" + resultAway + '\'' +
                 ", goalsHome=" + goalsHome.toString() +
                 ", goalsAway=" + goalsAway.toString() +
                 '}';
